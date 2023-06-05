@@ -6,6 +6,7 @@ trait ExpressionEncoder[-T <: Expression]:
 object ExpressionEncoder:
   def apply[E <: Expression: ExpressionEncoder]: ExpressionEncoder[E] =
     summon[ExpressionEncoder[E]]
+
   given QueryEncoder[E <: Expression]: ExpressionEncoder[E] =
     new ExpressionEncoder[E]:
       extension (expression: E)

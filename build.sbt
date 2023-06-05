@@ -1,7 +1,7 @@
 import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 
 val scala3Version = "3.3.0"
-val scala2Version = "2.13.10"
+// val scala2Version = "2.13.10"
 
 ThisBuild / organization := "com.bilal-fazlani"
 ThisBuild / organizationName := "Bilal Fazlani"
@@ -36,9 +36,9 @@ lazy val root = crossProject(JSPlatform, JVMPlatform)
   .in(file("."))
   .settings(
     name := "scala-aql",
-    scalaVersion := scala2Version,
-    crossScalaVersions := Seq(scala2Version, scala3Version)
+    scalaVersion := scala3Version
+    // crossScalaVersions := Seq(scala2Version, scala3Version)
   )
   .jsSettings(
-      scalaJSUseMainModuleInitializer := true
-    )
+    scalaJSUseMainModuleInitializer := true
+  )
