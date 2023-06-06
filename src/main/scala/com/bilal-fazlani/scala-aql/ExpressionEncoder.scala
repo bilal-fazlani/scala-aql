@@ -7,7 +7,7 @@ object ExpressionEncoder:
   def apply[E <: Expression: ExpressionEncoder]: ExpressionEncoder[E] =
     summon[ExpressionEncoder[E]]
 
-  given QueryEncoder[E <: Expression]: ExpressionEncoder[E] =
+  given ExpressionEncoder[E <: Expression]: ExpressionEncoder[E] =
     new ExpressionEncoder[E]:
       extension (expression: E)
         def encode: String = expression.asInstanceOf[Expression] match {
