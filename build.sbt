@@ -3,9 +3,6 @@ val scala3Version = "3.3.0"
 ThisBuild / organization := "com.bilal-fazlani"
 ThisBuild / organizationName := "Bilal Fazlani"
 
-ThisBuild / organization := "com.bilal-fazlani"
-ThisBuild / organizationName := "Bilal Fazlani"
-
 ThisBuild / scmInfo := Some(
   ScmInfo(
     url("https://github.com/bilal-fazlani/scala-aql"),
