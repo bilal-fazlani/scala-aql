@@ -30,5 +30,5 @@ lazy val root = project
   .settings(
     name := "scala-aql",
     scalaVersion := scala3Version,
-    libraryDependencies += "dev.zio" %% "zio-test" % "2.0.15" % Test
+    libraryDependencies += "dev.zio" %% "zio-test" % "2.0.14" % Test
   )
